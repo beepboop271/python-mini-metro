@@ -1,0 +1,16 @@
+Objective: Transport as many passengers as possible until the game is lost
+Lose Condition: If at least one stop has 6 waiting passengers for 45 seconds, the game is lost.
+
+How to play: All the player can do is form lines and add trains/carriages to them. Everything else is managed by the game. The player has a limited amount of tunnels, lines, trains, and carriages. Every 90 seconds the player will gain one random resource, and get to choose between two other ones.
+
+The World:
+The world contains some sort of water, and over time it generates stops (shapes) in random but controlled locations (from most likely to least likely: circles, triangles, squares). Passengers will spawn at stops over time as well (all shapes are equally likely).
+
+Lines:
+Clicking near a stop starts the line creation process. While holding down the left mouse button, moving the cursor near stops adds that stop to the line. Releasing the mouse commits changes made. After the line is made, it can be edited by left clicking on it. Clicking near the edge of an existing line to will extend it, and clicking anywhere else will insert stops. While the mouse is held down, dragging the cursor over an existing stop will remove it from the line. If a line segment crosses over water, it will use a tunnel, indicated by the superimposed circles.
+
+Trains/Carriages:
+Trains move carriages and passengers around. Carriages follow the train they are attached to and add passenger capacity to the train. Clicking on the train or carriage icon in the bottom right and dragging away makes a new train/carriage (if the player has enough resources for a new one). Moving it near a line will visibly attach the train/carriage to the line, and releasing the mouse adds the train/carriage to the line. If the train/carriage is released while it is not on a line, it returns to its original location. If it is released on top of the icons in the bottom right, it is returned to the player as a resource. There can be a maximum of 4 trains per line and 4 carriages per train. Existing trains or carriages can be clicked on and moved in the same way they were added onto a line. Once a train/carriage is moved, it will unload as many passengers as necessary to make the movement (e.g. to move a whole train, every passenger is dropped off at the next stop before moving), then move to the target location instantaneously.
+
+The interface:
+The top left number indicates how many passengers have been moved. The top right is where information and choices about resources will appear. The bottom left is a visual indicator of how many lines are available and how many are being used. The bottom right is where the player creates and destroys trains/carriages, and indicates how many of each resource the player has. Pressing space pauses the game. All movement and timers for stop overcrowding will stop, allowing the player to edit lines and move trains/carriages without being pressured by other time-sensitive things. The X in the top right of the window closes the game. Once a stop starts overcrowding, a red circle will start to fill in. If the arc fills to a complete circle, the game ends.
